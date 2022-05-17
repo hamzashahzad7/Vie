@@ -1,0 +1,50 @@
+@mixin linear-back {
+    background: linear-gradient(to right, aqua, rgb(201, 70, 201), rgb(255, 74, 104));
+    color: white;
+}
+
+@mixin linear-text {
+    background: linear-gradient(to right, aqua, blue, rgb(201, 70, 201), rgb(255, 74, 104));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if breakpoint==phone {
+        @media (max-width: 600px) {
+            @content
+        }
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if breakpoint==tablet-port {
+        @media (max-width: 900px) {
+            @content
+        }
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if breakpoint==tablet-landscape {
+        @media (max-width: 1200px) {
+            @content
+        }
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if breakpoint==desktop {
+        @media (max-width: 1800px) {
+            @content
+        }
+    }
+}

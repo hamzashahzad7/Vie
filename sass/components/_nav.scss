@@ -1,0 +1,47 @@
+.nav {
+    width: $section-width;
+    height: 8rem;
+    background-color: inherit;
+    // border-bottom: 1px solid white;
+    &-heading {
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline;
+        @include linear-text;
+        font-size: 3.5rem;
+        position: relative;
+        left: 6rem;
+        top: 2.4rem;
+        transition: all .3s;
+        &:hover {
+            letter-spacing: 1rem;
+        }
+    }
+    & ul {
+        position: absolute;
+        transform: translate(-29%, -50%);
+        top: 5%;
+        left: 38%;
+    }
+    & ul li {
+        float: left;
+        margin-right: 6rem;
+        list-style: none;
+        transition: all .5s;
+        padding: 1rem;
+        &:hover {
+            box-shadow: 3px 5px 15px 5px rgb(90, 90, 90);
+        }
+    }
+    & ul li a {
+        letter-spacing: .4rem;
+        font-size: 2.5rem;
+        text-decoration: none;
+        color: white;
+        font-weight: lighter;
+        transition: all .4s;
+        &:hover {
+            letter-spacing: 0;
+        }
+    }
+}
